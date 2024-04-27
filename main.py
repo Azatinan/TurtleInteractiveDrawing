@@ -19,13 +19,10 @@ def clear_screen():
     turtle_instance.clear()
 
 def turtle_return_home():
-    turtle_instance.home()
-
-def turtle_pen_up():
     turtle_instance.penup()
-
-def turtle_pen_down():
+    turtle_instance.home()
     turtle_instance.pendown()
+
 
 
 drawing_board.listen()
@@ -34,8 +31,7 @@ drawing_board.onkey(fun=rotate_angle_right, key="d")
 drawing_board.onkey(fun=rotate_angle_left, key="a")
 drawing_board.onkey(fun=clear_screen, key="k")
 drawing_board.onkey(fun=turtle_return_home, key="l")
-drawing_board.onkey(fun=turtle_pen_up, key="m")
-drawing_board.onkey(fun=turtle_pen_down, key="n")
+
 
 
 turtle.done()
